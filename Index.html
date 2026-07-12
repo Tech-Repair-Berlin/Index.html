@@ -195,6 +195,340 @@
 
         .contacto-seccion p {
             color: var(--texto-secundario);
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--texto-secundario);
+            font-size: 1rem;
+            border-top: 1px solid var(--borde);
+            margin-top: 4rem;
+        }
+
+        /* Ajustes Móvil */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-container { padding: 1rem; }
+            nav a { margin-left: 1rem; }
+            h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">TechRepair<span>Berlin</span></div>
+            <nav>
+                <a href="#precios">Precios</a>
+                <a href="#garantia">Garantía</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Especialistas en Berlín</h1>
+            <p>Cambio rápido de pantallas y baterías. Privacidad garantizada.</p>
+            <a href="#contacto" class="btn">Solicitar Reparación</a>
+        </section>
+
+        <div class="container">
+            
+            <!-- Sección Precios -->
+            <section id="precios">
+                <h2>Tarifas de Reparación</h2>
+                <table class="precios-tabla">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Cambio de Pantalla</th>
+                            <th style="text-align: right;">Cambio de Batería</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>iPhone 15 Pro Max</td>
+                            <td>Consultar €</td>
+                            <td class="precio-valor">Consultar €</td>
+                        </tr>
+                        <tr>
+                            <td>iPhone 14 Pro / 14 Pro Max</td>
+                            <td>En mantenimiento €</td>
+                            <td class="precio-valor">En mantenimiento €</td>
+                        </tr>
+                        <tr>
+                            <td>iPhone 13 / 13 Pro</td>
+                            <td>000 €</td>
+                            <td class="precio-valor">00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Surface (Varios modelos)</td>
+                            <td>Consultar €</td>
+                            <td class="precio-valor">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Sección Características / Confianza -->
+            <section id="garantia" class="features">
+                <div class="card">
+                    <h3>🔒 Privacidad Garantizada</h3>
+                    <p>Tus datos personales no nos interesan, solo reparar tu dispositivo. No necesitas facilitar tu código de desbloqueo a menos que sea estrictamente necesario para un test de hardware.</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Precisión Técnica</h3>
+                    <p>Sabemos lo importante que es tu equipo. Gestionamos los cambios con máxima precisión técnica, verificando meticulosamente que los cables flex queden perfectamente centrados al instalar cada nueva pantalla.</p>
+                </div>
+                <div class="card">
+                    <h3>🛠️ Componentes Testeados</h3>
+                    <p>Cada pieza instalada pasa un estricto control de calidad para asegurar un brillo óptimo, una respuesta táctil perfecta y una salud de batería duradera.</p>
+                </div>
+            </section>
+
+            <!-- Sección Contacto Modificada con Formulario y Email -->
+            <section id="contacto" class="contacto-seccion">
+                <h2>¿Necesitas reparar tu equipo?</h2>
+                <p>Escríbeme por WhatsApp, envíame un email o rellena el formulario de abajo para dejarnos los detalles de tu avería:</p>
+                
+                <!-- Correo Directo Añadido Aquí -->
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    📧 Email: <a href="mailto:tumarca.reparaciones@gmail.com" style="color: var(--acento); text-decoration: none; font-weight: bold;">tumarca.reparaciones@gmail.com</a>
+                </p>
+
+                <!-- Botón de WhatsApp -->
+                <a href="https://wa.me/49123456789?text=Hola,%20necesito%20un%20presupuesto%20para%20reparar%20mi%20dispositivo" class="btn" target="_blank" style="background-color: #25D366; margin-bottom: 2.5rem; display: inline-block;">
+                    💬 Contactar por WhatsApp
+                </a>
+
+                <!-- FORMULARIO VINCULADO A TU CUENTA -->
+                <form action="https://formspree.io/f/mrewnbdy" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left; max-width: 500px; margin: 0 auto; background: #1a1a1e; padding: 2rem; border-radius: 8px; border: 1px solid #2c2c30;">
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-weight: 600; font-size: 1.1rem;">Tu Correo Electrónico:</label>
+                        <input type="email" name="email" required style="padding: 0.8rem; background: #121214; border: 1px solid #2c2c30; color: white; border-radius: 6px; font-size: 1.1rem;">
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="font-weight: 600; font-size: 1.1rem;">Modelo y avería:</label>
+                        <textarea name="mensaje" placeholder="Ej: iPhone 15 Pro Max, pantalla rota..." required style="padding: 0.8rem; background: #121214; border: 1px solid #2c2c30; color: white; border-radius: 6px; min-height: 120px; font-size: 1.1rem; font-family: inherit;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer; font-size: 1.1rem; padding: 1rem;">Enviar Solicitud</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tech Repair Berlin. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Repair Berlin | Reparación Especializada</title>
+    <style>
+        /* Variables de color */
+        :root {
+            --bg-principal: #121214;
+            --bg-secundario: #1a1a1e;
+            --texto-principal: #ffffff;
+            --texto-secundario: #a0a0a5;
+            --acento: #0071e3;
+            --acento-hover: #0077ed;
+            --borde: #2c2c30;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Ajustes de tamaño para mayor legibilidad */
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-principal);
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        header {
+            background-color: rgba(18, 18, 20, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--acento);
+        }
+
+        nav a {
+            color: var(--texto-secundario);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--texto-principal);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            color: var(--texto-secundario);
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--acento);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--acento-hover);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        /* Tabla de Precios */
+        .precios-tabla {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-secundario);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            border: 1px solid var(--borde);
+        }
+
+        .precios-tabla th, .precios-tabla td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        .precios-tabla th {
+            background-color: #242428;
+            font-weight: 600;
+            color: var(--texto-secundario);
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .precios-tabla tr {
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .precios-tabla tr:last-child {
+            border-bottom: none;
+        }
+
+        .precio-valor {
+            font-weight: 600;
+            color: var(--acento);
+            text-align: right;
+        }
+
+        /* Cards Confianza */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: var(--bg-secundario);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--borde);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--texto-secundario);
+            font-size: 1.1rem;
+        }
+
+        /* Contacto */
+        .contacto-seccion {
+            background-color: var(--bg-secundario);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--borde);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contacto-seccion p {
+            color: var(--texto-secundario);
             margin-bottom: 2rem;
         }
 
