@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Reparaciones Berlín</title>
+</head>
+<body>
+    <h1>Solicitud de Presupuesto</h1>
+    <p>Por favor, completa los datos de tu iPhone para recibir un diagnóstico.</p>
+
+    <!-- Pega aquí el código del formulario que generamos -->
+    <form action="https://formspree.io/f/mrewnbdy" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br>
+
+        <label for="email">Tu correo:</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="modelo">Modelo de iPhone:</label>
+        <select name="modelo" id="modelo">
+            <option value="iphone14">iPhone 14</option>
+            <option value="iphone15">iPhone 15</option>
+        </select><br>
+
+        <label for="mensaje">Descripción del problema:</label><br>
+        <textarea name="mensaje" id="mensaje" required></textarea><br>
+
+        <label for="foto">Adjuntar foto del daño:</label>
+        <input type="file" name="foto" id="foto" accept="image/*"><br>
+
+        <button type="submit">Enviar solicitud</button>
+    </form>
+</body>
+</html>
