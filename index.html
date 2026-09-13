@@ -540,5 +540,18 @@
         }
     </script>
 
+    <!-- SCRIPT DE BLOQUEO DE INSPECCIÓN -->
+    <script>
+        // Bloquear el clic derecho
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Bloquear atajos de teclado (F12, Ctrl+Shift+I, Ctrl+U)
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123) { return false; } // Bloquea F12
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { return false; } // Bloquea Ctrl+Shift+I
+            if (e.ctrlKey && e.keyCode == 85) { return false; } // Bloquea Ctrl+U (ver código fuente)
+        };
+    </script>
+
 </body>
 </html>
